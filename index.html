@@ -4,7 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="importmap">
+      {
+        "imports": {
+          "@material/web/": "https://esm.run/@material/web/"
+        }
+      }
+    </script>
+    <script type="module">
+      import "@material/web/all.js";
+      import { styles as typescaleStyles } from "@material/web/typography/md-typescale-styles.js";
+
+      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
     <title>RabbitWrite</title>
   </head>
-  <body></body>
+  <body>
+    <md-tabs id="toptabs">
+      <md-primary-tab>
+        <md-icon slot="icon">edit</md-icon>
+        Write
+      </md-primary-tab>
+      <md-primary-tab>
+        <md-icon slot="icon">list</md-icon>
+        Lists
+      </md-primary-tab>
+      <md-primary-tab>
+        <md-icon slot="icon">bar_chart</md-icon>
+        Stats
+      </md-primary-tab>
+    </md-tabs>
+  </body>
 </html>
